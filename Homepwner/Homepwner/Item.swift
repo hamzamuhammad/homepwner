@@ -36,7 +36,7 @@ class Item: NSObject {
             
             let randomName = "\(randomAdjective) \(randomNoun)"
             let randomValue = Int(arc4random_uniform(100))
-            let randomSerialNumber = NSUUID().UUIDString.componentsSeparatedByString(".").first!
+            let randomSerialNumber = NSUUID().UUIDString.componentsSeparatedByString("-").first!
             
             self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
         }
